@@ -39,7 +39,7 @@ body > div.container > main {
 
 body > div.container > main > div.calculator {
   width: 854px;
-  height: 480px;
+  height: 520px;
   background: #2C394B;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 5px;
@@ -102,9 +102,10 @@ body > div.container > main > div.calculator > form > div.keyboard {
 
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
-body > div.container > main > div.calculator > form > div.keyboard button {
+body > div.container > main > div.calculator > form > div button {
   background: #334756;
   color: #ffffff;
   font-size: 16pt;
@@ -114,11 +115,32 @@ body > div.container > main > div.calculator > form > div.keyboard button {
   cursor: pointer;
 }
 
-body > div.container > main > div.calculator > form > div.keyboard > div.numeric_keyboard {
+body > div.container > main > div.calculator > form > div button:hover {
+  background: #243542;
+}
+
+body > div.container > main > div.calculator > form > div.keyboard > div.topbar {
+  width: 100%;
+  height: 67.5px;
+  margin: 10px 0;
+
+  display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+body > div.container > main > div.calculator > form > div.keyboard > div.horizontal_keyboard {
   width: 100%;
   height: 300px;
 
   display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
+}
+
+body > div.container > main > div.calculator > form > div.keyboard > div.horizontal_keyboard > button.equals {
+  background: #FF4C29;
+  grid-column-start: 4;
+  grid-row-start: 3;
+  grid-row-end: 5;
 }
